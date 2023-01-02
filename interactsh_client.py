@@ -375,7 +375,7 @@ class InteractshDNSInteraction(InteractshInteraction):
         return InteractshDNSInteraction(unique_id=d["unique-id"],
                                         full_id=d["full-id"],
                                         host_basename=host_basename,
-                                        q_type=d["q-type"],
+                                        q_type=d.get("q-type", "UNKNOWN"),
                                         raw_request=d["raw-request"],
                                         raw_response=d["raw-response"],
                                         remote_address=d["remote-address"],
